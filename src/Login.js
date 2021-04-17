@@ -36,10 +36,10 @@ const Login = ({ onLogin }) => {
              * TODO: pass updateEmail & updatePassword functions to the onChange prop for each respective
              * FormControl component
              */}
-            <FormControl type="email" placeholder="Enter email" onChange={updateEmail(e)}/>
+            <FormControl type="email" placeholder="Enter email" onChange={updateEmail()}/>
           </Col>
           <Col>
-            <FormControl type="password" placeholder="Password" onChange={updatePassword(e)}/>
+            <FormControl type="password" placeholder="Password" onChange={updatePassword()}/>
           </Col>
           <Col>
             <InputGroup.Append>
