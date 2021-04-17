@@ -26,6 +26,7 @@ const Note = ({
 
   const save = () => {
     // TODO: call saveNote with id & the currNote state variable
+    saveNote(id, currNote);
   };
 
   const isCurrNote = currNoteId === id;
@@ -34,16 +35,17 @@ const Note = ({
     <div className="col-3 note" key={id}>
       <Form>
         <Form.Group>
-          {/** TODO: pass a couple important props to each Note component
+          { 
+          /** TODO: pass a couple important props to each Note component
            * pass note to the defaultValue prop
            * pass the editNote function to the onChange prop
            * pass disabled to the disabled prop
-           */}
+           */} defaultValue={note} onChange={editNote()}
           <FormControl as="textarea" rows={5} />
           <InputGroup.Append>
             {edit && isCurrNote && (
               // TODO: pass the save function to the onClick prop of Button
-              <Button className="save-btn">Save</Button>
+              <Button className="save-btn" onClick={save()}>Save</Button>
             )}
           </InputGroup.Append>
         </Form.Group>
